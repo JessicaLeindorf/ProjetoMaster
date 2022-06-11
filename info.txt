@@ -1,0 +1,77 @@
+arduino 2 = rx = bco = axul = tx
+
+
+pinos:
+    arduino - Macho :
+        verde = 3 -> Verde = TX
+        branco = 2 -> Amarelo = RX
+        laranja - 6 - ???
+        vermelho - 5
+
+    esp - Femea :
+        marrom - GPIO1 = TX
+        vermleho - GPIO3 = RX
+        preto - GPIO15 = D8
+        branco - GPIO13 = D7
+        cinza - GPIO5 = D1 = 20
+        roxo - GPIO16 = D0 = 47
+
+    
+pinos shield:
+    A0 = IO
+    A1 = EN4
+    A2 = EN3
+    A3 = EN2
+    A4 = EN1
+    A5 = EN0
+
+    D12 = Multiplex A
+    D11 = Multiplex B
+    D10 = Multiplex C
+    D9 = Thermal SCK
+    D8 = Thermal SO
+
+    D3 = TX1
+    D2 = RX1
+esp8266 - serial?
+
+polo negativo dos termais é compartilhado - posso usar o mesmo terra
+
+usar multiplexer no sck ao inves do cs
+cs é ativo em nivel baixo - multiplexer teria que ser negado
+
+THINGSPEAK - 15 segundos entre requests para free e 1 segundo entre requests para premium
+
+sensor nivel de agua:
+https://www.youtube.com/watch?v=hTjfDUOtfjk&ab_channel=WLMecatr%C3%B4nica
+
+https://www.embarcados.com.br/esp8266-com-arduino/
+https://blogmasterwalkershop.com.br/arduino/como-usar-com-arduino-modulo-wifi-esp8266-esp-01/
+
+usar mux/demux para suportar todos os dispositivos
+
+
+1 placa de fibra de vidro de pelo menos 20x20
+1 percloreto de ferro
+
+Socket DIP:
+3 cd4050 - buffer não-inversor - comunicação com o esp
+3 74HC4067 ou 74HCT4067 - 16-channel analog multiplexer/demultiplexer --- PRINCIPAL
+
+3 74HC4052 4-channel analog multiplexer, demultiplexer --- Secundario
+OU
+3 74HC4051 8-channel analog multiplexer, demultiplexer
+
+
+10+ resistor 1k 1/8w ou 1/4w
+1 broca 1mm
+20 BC547
+
+3 Lm7805 - 
+4 capacitor ceramico 0.1uf
+4 capacitor ceramico 0.2uf
+4 capacitor eletrolitico 10uf
+4 capacitor eletrolitico 100uf
+
+5 barra de terminais femea
+5 barra de terminais macho
